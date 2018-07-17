@@ -1,0 +1,23 @@
+import random
+
+def roll():
+    
+    letter = ''
+    while not (letter == 'YES'):
+      print('Do you want to to roll?')
+      letter = input().upper()
+
+    # the first element in the tuple is the player's letter, the second is the computer's letter.
+      if letter == 'YES':
+        x = random.randint(1,6)
+        square(x)
+      elif letter != 'YES':
+        return("dommage")
+    roll()
+
+def square(x):
+ 
+ print (' _____')
+ print ('|     |')
+ print ('| ',  x, ' |')
+ print ('|_____|')
